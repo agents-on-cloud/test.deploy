@@ -71,7 +71,9 @@
                       >
                         <h1 class="BoardName">
                           Welcome <span> {{ count }} </span>
-                          <v-btn @click="increaseCount"> + </v-btn>
+                          <v-btn color="primary" @click="increaseCount">
+                            increase+
+                          </v-btn>
                         </h1>
                       </div>
                     </div>
@@ -115,11 +117,12 @@ export default {
       count: 0,
     };
   },
-  mounted: {
+  methods: {
     async increaseCount() {
       try {
+        console.log("send request");
         const response = await axios.get("https://api.firas-odia.com/increase");
-        this.count = response.data;
+        this.count = response.data.count;
       } catch (error) {
         console.log("error", error.message);
       }
