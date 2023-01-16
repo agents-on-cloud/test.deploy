@@ -69,7 +69,7 @@
                         class="fl-wrap section-entry hiddec-anim"
                         style="opacity: 1"
                       >
-                        <h1 class="BoardName">Welcome to My Page</h1>
+                        <h1 class="BoardName">Welcome</h1>
                       </div>
                     </div>
                   </div>
