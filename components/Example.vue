@@ -69,7 +69,10 @@
                         class="fl-wrap section-entry hiddec-anim"
                         style="opacity: 1"
                       >
-                        <h1 class="BoardName">Welcome</h1>
+                        <h1 class="BoardName">
+                          Welcome <span> {{ count }} </span>
+                          <v-btn @click="increaseCount"> + </v-btn>
+                        </h1>
                       </div>
                     </div>
                   </div>
@@ -104,8 +107,24 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "Example",
+  data() {
+    return {
+      count: 0,
+    };
+  },
+  mounted: {
+    async increaseCount() {
+      try {
+        const response = await axios.get("https://api.firas-odia.com/increase");
+        this.count = response.data;
+      } catch (error) {
+        console.log("error", error.message);
+      }
+    },
+  },
 };
 </script>
 
