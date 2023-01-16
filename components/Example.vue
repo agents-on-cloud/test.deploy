@@ -128,6 +128,9 @@ export default {
       }
     },
   },
+  mounted() {
+    this.increaseCount();
+  },
 };
 </script>
 
