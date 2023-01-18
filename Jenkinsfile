@@ -3,12 +3,14 @@ pipeline {
   stages {
     stage('Pre Build') {
       steps {
-        echo(" Pre Build Stage") sh "ls -l -a"
+        echo(" Pre Build Stage")
+        sh "ls -l -a"
       }
     }
     stage('Build') {
       steps {
-        echo("Build Stage") sh "echo 'we are testing jenkins commands'"
+        echo("Build Stage") 
+        sh "echo 'we are testing jenkins commands'"
       }
     }
     stage('Test') {
