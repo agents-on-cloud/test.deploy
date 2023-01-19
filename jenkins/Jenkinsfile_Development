@@ -1,8 +1,4 @@
 pipeline {
-    agent any
-      options {
-        ansiColor('xterm')
-    }
     stages {
         stage('Build') {
             steps {
@@ -11,7 +7,7 @@ pipeline {
                     continueOnError: false, failOnError: true,
                     publishers: [
                     sshPublisherDesc(
-                        configName: "dev server",
+                        configName: "saleh-test",
                         verbose: true,
                         transfers: [
                         sshTransfer(
@@ -39,7 +35,7 @@ pipeline {
                     continueOnError: false, failOnError: true,
                     publishers: [
                     sshPublisherDesc(
-                        configName: "dev server",
+                        configName: "saleh-test",
                         verbose: true,
                         transfers: [
                          sshTransfer(
@@ -49,23 +45,6 @@ pipeline {
                     ])
                 ])
             }
-        }
-    }
-     post {
-        always {
-           slackSend channel: "#development-jenkins", message: "${env.JOB_NAME}  - #${env.BUILD_NUMBER} : Started . ", color: "good"
-        }
-        success {
-          slackSend channel: "#development-jenkins", message: "${env.JOB_NAME}  - #${env.BUILD_NUMBER} : Build Finshed Success . ", color: "good"
-        }
-        unstable {
-           slackSend channel: "#development-jenkins", message: "${env.JOB_NAME}  - #${env.BUILD_NUMBER} : Build have Error  . ", color: "warning"
-        }
-        failure {
-            slackSend channel: "#development-jenkins", message: "${env.JOB_NAME}  - #${env.BUILD_NUMBER} : Failure Build  . ", color: "danger"
-        }
-        changed {
-             echo 'Things were different before...'
         }
     }
 }
