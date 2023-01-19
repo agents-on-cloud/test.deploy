@@ -70,7 +70,7 @@
                         style="opacity: 1"
                       >
                         <h1 class="BoardName">
-                          Welcome <span> {{ count }} </span>
+                          Welcome next change <span> {{ count }} </span>
                           <v-btn color="primary" @click="increaseCount">
                             increase+
                           </v-btn>

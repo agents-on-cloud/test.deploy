@@ -17,7 +17,7 @@ pipeline {
                         sshTransfer(
                             sourceFiles: "**/*",
                             remoteDirectory: "test-front",
-                            execCommand:"cd /var/www/test-front && sudo npm i"
+                            execCommand:"cd /var/www/test-front && sudo npm i && sudo npm run build && pm2 start"
                            
                         ),
                     ])
