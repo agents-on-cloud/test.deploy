@@ -12,12 +12,12 @@ pipeline {
                         verbose: true,
                         transfers: [
                         sshTransfer(
-                            execCommand: " rm -rf /var/www/api.ciam.agentsoncloud.com_Release_4"
+                            execCommand: " rm -rf /var/www/test-front"
                         ),
                         sshTransfer(
                             sourceFiles: "**/*",
-                            remoteDirectory: "api.ciam.agentsoncloud.com_Release_4",
-                            execCommand:"cd /var/www/api.ciam.agentsoncloud.com_Release_4 && sudo npm i"
+                            remoteDirectory: "test-front",
+                            execCommand:"cd /var/www/test-front && sudo npm i"
                            
                         ),
                     ])
@@ -40,7 +40,7 @@ pipeline {
                         verbose: true,
                         transfers: [
                          sshTransfer(
-                                 execCommand: "cd /var/www/api.ciam.agentsoncloud.com_Release_4 && pm2 start"
+                                 execCommand: "cd /var/www/test-front && pm2 start"
                          )
                      
                     ])
