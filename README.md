@@ -6,7 +6,7 @@ asdasdasd
 # install dependencies
 $ npm install
 sddsdfgsdf
-# serve with hot reload at relocaasdasdlhost:3000
+# serve with hot reload at reasdasdlocaasdasdlhost:3000
 $ npm run dev
 asdasd
 # build for production and launch server
