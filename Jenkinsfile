@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Debug') {
             steps {
-                echo "Webhook payload: ${params.payload}"
+                echo "Webhook payload: ${params}"
                 echo "Webhook event type: ${env.GIT_EVENT_TYPE}"
                 echo "Git tag: ${env.GIT_TAG}"
             }
