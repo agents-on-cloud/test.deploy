@@ -20,12 +20,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // sh 'make package'
+                echo 'make package'
             }
         }
         stage('Test') {
             steps {
-                // sh 'make check'
+                echo 'make check'
             }
         }
         stage('Deploy') {
