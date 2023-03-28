@@ -1,14 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Tag event') {
-            // when {
-            //     expression {
-            //         return env.GIT_EVENT_TYPE == 'push'
-            //     }
-            // }
+        stage('Get payload data') {
             steps {
-                echo "Tag name: ${env.GIT_EVENT_TYPE}"
+                echo "Event type: ${env.GIT_EVENT_TYPE}"
+                echo "Branch name: ${env.GIT_BRANCH}"
+                echo "Tag name: ${env.GIT_TAG}"
                 // Add more steps as needed for testing, deployment, etc.
             }
         }
