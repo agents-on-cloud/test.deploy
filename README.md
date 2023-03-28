@@ -7,7 +7,7 @@ asdasdasd
 $ npm install
 sddsdfgsdf
 # serve with hot reload at reasdasdasedaelocaasdasdlhost:3000
-$ npm run dev
+$ npm run dmnhbjhev
 asdasd
 # build for production and launch server
 $ npm runsadasdasdasd buildsdsa
