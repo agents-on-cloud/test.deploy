@@ -32,13 +32,13 @@
 
 pipeline {
     agent any
-    triggers {
-        webhookTrigger(
-            events: [
-                tags('v.*')
-            ]
-        )
-    }
+    // triggers {
+    //     webhookTrigger(
+    //         events: [
+    //             tags('v.*')
+    //         ]
+    //     )
+    // }
     stages {
         stage('Retrieve Payload') {
             steps {
