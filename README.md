@@ -11,7 +11,7 @@ $ npm run dmnhbjhev
 asdasd
 # build for production and dfsdf server
 $ npm runsadasdasdasd buildsdsa
-$ npm run startdsfd
+$ npm run startdsfdfdsf
 
 # generate staasdasdtic projectasdadsasdaasd
 
