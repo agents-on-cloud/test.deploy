@@ -5,7 +5,7 @@ asdasdasd
 ```bash
 # install dependencies
 $ npm install
-sdd
+sddsdfgsdf
 # serve with hot reload at locaasdasdlhost:3000
 $ npm run dev
 
