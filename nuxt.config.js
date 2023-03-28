@@ -6,7 +6,7 @@ export default {
   //release_1
   ssr: true,
   server: {
-    port: 30303, // default: 3000
+    port: 30303, dasd// default: 3000
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
