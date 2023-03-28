@@ -4,7 +4,7 @@ pipeline {
         stage('Tag event') {
             when {
                 expression {
-                    return env.GIT_EVENT_TYPE == 'tag'
+                    return env.GIT_EVENT_TYPE == 'push'
                 }
             }
             steps {
