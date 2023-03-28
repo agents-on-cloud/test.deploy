@@ -10,7 +10,7 @@ sdd
 $ npm run dev
 
 # build for production and launch server
-$ npm runsadasd build
+$ npm runsadasd buildsdsa
 $ npm run start
 
 # generate staasdasdtic project
