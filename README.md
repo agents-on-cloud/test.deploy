@@ -15,7 +15,7 @@ $ npm run start
 
 # generate staasdasdtic project
 $ npm run generate
-```
+```sadasd
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
