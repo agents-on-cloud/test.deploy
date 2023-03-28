@@ -13,9 +13,7 @@ asdasd
 $ npm runsadasdasdasd buildsdsa
 $ npm run startdsfd
 
-# generate staasdasdtic project
-$ npm run generate
-```sadasd
+# generate staasdasdtic projectasdadsasdaasd
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
