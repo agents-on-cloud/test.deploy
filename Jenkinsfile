@@ -2,13 +2,13 @@ pipeline {
     agent any
     stages {
         stage('Tag event') {
-            when {
-                expression {
-                    return env.GIT_EVENT_TYPE == 'push'
-                }
-            }
+            // when {
+            //     expression {
+            //         return env.GIT_EVENT_TYPE == 'push'
+            //     }
+            // }
             steps {
-                echo "Tag name: ${env.GIT_TAG}"
+                echo "Tag name: ${env.GIT_EVENT_TYPE}"
                 // Add more steps as needed for testing, deployment, etc.
             }
         }
