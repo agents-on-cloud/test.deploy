@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Get payload data') {
             steps {
+               echo "Payload: ${env.payload}"
                 echo "Event type: ${env.GIT_EVENT_TYPE}"
                 echo "Branch name: ${env.GIT_BRANCH}"
                 echo "Tag name: ${env.GIT_TAG}"
