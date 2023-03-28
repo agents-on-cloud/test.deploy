@@ -20,7 +20,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'make package'
+        echo "Deploying only because this commit is tagged with ${env.GIT_TAG}"
             }
         }
         stage('Test') {
