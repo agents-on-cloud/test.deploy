@@ -1,26 +1,16 @@
-// pipeline {
-//     agent any
-//     stages {
-//         stage('Get payload data') {
-//             steps {
-//                echo "Payload: ${env.payload}"
-//                 echo "Event type: ${env.GIT_EVENT_TYPE}"
-//                 echo "Branch name: ${env.GIT_BRANCH}"
-//                 echo "Tag name: ${env.GIT_TAG}"
-//                 // Add more steps as needed for testing, deployment, etc.
-//             }
-//         }
-//         // Add more stages as needed for other events, such as push, pull request, etc.
-//     }
-// }
-
-
 pipeline {
     agent any
     stages {
+        stage('Debug') {
+            steps {
+                echo "Webhook payload: ${params.payload}"
+                echo "Webhook event type: ${env.GIT_EVENT_TYPE}"
+                echo "Git tag: ${env.GIT_TAG}"
+            }
+        }
         stage('Build') {
             steps {
-        echo "Deploying only because this commit is tagged with ${env.GIT_TAG}"
+                echo 'make package'
             }
         }
         stage('Test') {
@@ -29,9 +19,9 @@ pipeline {
             }
         }
         stage('Deploy') {
-            when { tag "v*" }
+            when { expression { env.GIT_EVENT_TYPE == 'tag' } }
             steps {
-                echo 'Deploying only because this commit is tagged...'
+                echo "Deploying only because this commit is tagged with ${env.GIT_TAG}"
                 // sh 'make deploy'
             }
         }
