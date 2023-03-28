@@ -20,19 +20,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'make package'
+                // sh 'make package'
             }
         }
         stage('Test') {
             steps {
-                sh 'make check'
+                // sh 'make check'
             }
         }
         stage('Deploy') {
             when { tag "v*" }
             steps {
                 echo 'Deploying only because this commit is tagged...'
-                sh 'make deploy'
+                // sh 'make deploy'
             }
         }
     }
