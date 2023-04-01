@@ -24,11 +24,11 @@ pipeline {
     agent any
     
     stages {
-        stage('Print Tag Name') {
+        stage('Show Latest Commit Message') {
             steps {
                 sh '''
-                    echo "Tag Name:"
-                    echo ${GITHUB_REF#refs/tags/}
+                    git fetch
+                    git log -1 --pretty=%B
                 '''
             }
         }
