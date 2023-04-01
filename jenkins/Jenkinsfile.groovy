@@ -22,12 +22,13 @@
 
 pipeline {
     agent any
+    
     stages {
-        stage('Print Payload') {
+        stage('Print Tag Name') {
             steps {
                 sh '''
-                    echo "Payload:"
-                    echo $GITHUB_PAYLOAD
+                    echo "Tag Name:"
+                    echo ${GITHUB_REF#refs/tags/}
                 '''
             }
         }
