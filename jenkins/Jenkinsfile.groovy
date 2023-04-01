@@ -1,20 +1,40 @@
+// pipeline {
+//     agent any 
+//     stages {
+//         stage('Build') { 
+//             steps {
+//                 echo("sadasdasd") 
+//             }
+//         }
+//         stage('Test') { 
+//             steps {
+//                 echo("sadasdasd") 
+//             }
+//         }
+//         stage('Deploy') { 
+//             steps {
+//                 echo("sadasdasd") 
+//             }
+//         }
+//     }
+// }
+
 pipeline {
-    agent any 
+    agent any
+    
     stages {
-        stage('Build') { 
+        stage('Print Payload') {
             steps {
-                echo("sadasdasd") 
-            }
-        }
-        stage('Test') { 
-            steps {
-                echo("sadasdasd") 
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                echo("sadasdasd") 
+                sh '''
+                    echo "Payload:"
+                    echo $GITHUB_PAYLOAD
+                '''
             }
         }
     }
 }
+
+
+
+
+
