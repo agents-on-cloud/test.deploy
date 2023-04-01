@@ -11,7 +11,7 @@ $ npm run dev
 sdffsfgyfgh
 # build for production and launch server
 $ npm runsadasd buildsdsa
-$ npm run start
+$ npm runsfsdf start
 
 # generate staasdasdtic project
 $ npm run generate
