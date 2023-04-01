@@ -22,11 +22,6 @@
 
 pipeline {
     agent any
-    options {
-        github {
-            autoTriggerEnabled true
-        }
-    }
     stages {
         stage('Print Payload') {
             steps {
